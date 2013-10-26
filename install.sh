@@ -11,19 +11,18 @@ sudo apt-get update
 sudo apt-get -y install build-essential zlib1g-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev curl git-core python-software-properties libsqlite3-dev
 
 # Stuff used by Ballistiq often
-# ImageMagick (used by Paperclip gem)
-sudo apt-get -y install zip unzip imagemagick
+sudo apt-get -y install zip unzip
 # MySQL headers. Required by mysql2 gem
-sudo apt-get -y install libmysql++-dev
+# sudo apt-get -y install libmysql++-dev
 
 # Install Ruby
 
 if ! type ruby > /dev/null; then
 	mkdir ~/src
 	cd ~/src
-	wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p429.tar.gz
-	tar -zxf ruby-1.9.3-p429.tar.gz
-	cd ruby-1.9.3-p429
+	wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p448.tar.gz
+	tar -zxf ruby-1.9.3-p448.tar.gz
+	cd ruby-1.9.3-p448
 	./configure
 	make
 	sudo make install
